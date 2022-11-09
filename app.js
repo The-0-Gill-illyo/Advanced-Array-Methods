@@ -224,9 +224,9 @@ console.log("Problem Five, even servings", servingsDividedByTwo)
 function problemSix(){
     let results;
     results = dishes.filter(function(el){
-        console.log("Problem Six include Chickpeas", el)
-            if(el.ingredients = "chickpea"){
-                return dishes.ingredients;
+        console.log("Problem Six include Chickpeas", el.ingredients )
+            if(el.ingredients.includes("chickpea")){
+                return true;
             }
             else{
                 return false;
@@ -234,7 +234,7 @@ function problemSix(){
             return results
 }
 let includeChickpea = problemSix();
-console.log("Problem Six include Chickpeas", includeChickpea.includes(("chickpea")))
+console.log("Problem Six include Chickpeas", includeChickpea) 
 
 
 //7. Create a function that will prompt the user to type the name of one ingredient. Then use a filter to find all the dishes whose ingredients array INCLUDES that ingredient. Return the new array.
