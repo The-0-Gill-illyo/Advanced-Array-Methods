@@ -201,14 +201,40 @@ console.log("Problem Four id matches serving count", idMatchServings)
 
 //5. Create a function that will return only dishes whose serving count is even.
 //Filter
-
+function problemFive(){
+    let results;
+    results = dishes.filter(function(el){
+        console.log("Problem Five, even servings", el)
+        if(el.servings / 4){
+            return true;
+        }
+        else{
+            return false;
+        }})
+        return results
+}
+let servingsDividedByTwo = problemFive();
+console.log("Problem Five, even servings", servingsDividedByTwo)
 
 
 //6. Create a function that will return dishes whose ingredients array INCLUDES "chickpea".
 //Hint: You do not want to check the array's indexes to find out what the array INCLUDES.
 //Double Hint: Research 'javascript does array include item'
 //Filter
-
+function problemSix(){
+    let results;
+    results = dishes.filter(function(el){
+        console.log("Problem Six include Chickpeas", el)
+            if(el.ingredients = "chickpea"){
+                return dishes.ingredients;
+            }
+            else{
+                return false;
+            }})
+            return results
+}
+let includeChickpea = problemSix();
+console.log("Problem Six include Chickpeas", includeChickpea.includes(("chickpea")))
 
 
 //7. Create a function that will prompt the user to type the name of one ingredient. Then use a filter to find all the dishes whose ingredients array INCLUDES that ingredient. Return the new array.
@@ -218,8 +244,23 @@ console.log("Problem Four id matches serving count", idMatchServings)
 
 //8a. Create a function that will return an array of the string cuisine types. Ie, ["Italian", "Italian", "Mexican", ...]
 //Map
-
-
+function problemEightA(){
+    let results;
+    results = dishes.map(function(dishes){
+        console.log("Prblem Eight A Cuisine String", dishes.cuisine)
+    })}
+    let cuisine = problemEightA()
+    console.log(dishes.cuisine)
+//         if(el.cuisine = dishes.cuisine){
+//             return dishes.cuisine;
+//         }
+//         else{
+//             return false;
+//         }})
+//         return results
+// }[]
+// let cuisineArray = problemEightA();
+// console.log("Problem Eight A Cuisine Array", cuisineArray.cuisine)
 
 //9. Create a function that will return an array of strings, with the cuisine type appended to the start of the dish's name. Ie, ["Italian Pizza", "Italian Spaghetti", ...]
 //Map 
