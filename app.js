@@ -119,7 +119,7 @@ function filterExample(){
     //Debug tip: Use a console.log(el) inside the filter function to get a visualization of what el represents and see all its properties! This helps you to know what you can access with dot notation inside the filter. Do this every time you use a .filter or else you are working in the dark!
     let results;
     results = dishes.filter(function(el){
-        console.log("el inside filterExample's filter: ", el)
+       
         if(el.cuisine === "Mexican"){
             return true;
         }
@@ -143,7 +143,7 @@ function problemOne(){
 
     let results;
     results = dishes.filter(function(el){
-        console.log("Problem One filter", el)
+       
         if(el.cuisine === "Vegetarian"){
             return true;
         }
@@ -159,41 +159,22 @@ console.log("Problem One: Vegetarian Dishes", vegetarianFood)
 //2. Create a function that will prompt the user to enter a cuisine type and then return all dishes that match that type
 //Filter
 function problemTwo(){
-    let SearchReturn = []
-    let textInput = ""
+    let textInput = prompt("Please choose the type of cuisine type, Italian, Mexican, French, Irish, Vegetarian, Hungarian, Vietnamese!")
     let results;
     results = dishes.filter(function(el){
-        console.log("Problem Two", el)
-        while(textInput != "done"){
-        textInput = prompt("Please choose the type of cuisine type, Italian, Mexican, French, Irish, Vegetarian, Hungarian, Vietnamese!")
-           if(textInput == "Italian"){
+       
+
+           if(el.cuisine == textInput){
                 return true;
            }
-           else if(textInput === "Mexican"){
-            return true;
-            }
-           else if(textInput === "French"){
-            return true;
-            }
-           else if(textInput === "Irish"){
-            return true;
-            }
-           else if(textInput === "Vegetarian"){
-            return true;
-            }
-           else if(textInput === "Hungarian"){
-            return true;
-            }
-           else if(textInput === "Vietnamese"){
-            return true;
-            }
            else{
             return false;
-            }
-        }
-            return results
-    })}
-    
+}})
+            return results;
+}
+    let userChoice = problemTwo();
+    console.log("Problem 2 iUser Choice", userChoice)
+
 
 
 
@@ -202,7 +183,7 @@ function problemTwo(){
 function problemThree(){
     let results;
     results = dishes.filter(function(el){
-        console.log("Problem Three Filter", el)
+      
         if(el.cuisine = "Italian" && el.servings > 5){
             return true;
         }
@@ -220,7 +201,7 @@ console.log("Problem Three Italian Servings Greater than 5", italianServings)
 function problemFour(){
     let results;
     results = dishes.filter(function(el){
-        console.log("Problem Four id Servings Filter", el)
+        
         if(el.id = el.servings){
             return true;
         }
@@ -238,7 +219,7 @@ console.log("Problem Four id matches serving count", idMatchServings)
 function problemFive(){
     let results;
     results = dishes.filter(function(el){
-        console.log("Problem Five, even servings", el)
+       
         if(el.servings / 4){
             return true;
         }
@@ -258,7 +239,7 @@ console.log("Problem Five, even servings", servingsDividedByTwo)
 function problemSix(){
     let results;
     results = dishes.filter(function(el){
-        console.log("Problem Six include Chickpeas", el.ingredients )
+
             if(el.ingredients.includes("chickpea")){
                 return true;
             }
@@ -281,7 +262,7 @@ console.log("Problem Six include Chickpeas", includeChickpea)
 function problemEightA(){
     let results;
     results = dishes.map(function(el){
-        console.log("Prblem Eight A Cuisine String", el)
+   
             if(!el.cuisine == "cuisine"){
                 return el.cuisine;
             }
