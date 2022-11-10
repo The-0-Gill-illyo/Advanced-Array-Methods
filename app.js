@@ -158,9 +158,44 @@ console.log("Problem One: Vegetarian Dishes", vegetarianFood)
 
 //2. Create a function that will prompt the user to enter a cuisine type and then return all dishes that match that type
 //Filter
+function problemTwo(){
+    let SearchReturn = []
+    let textInput = ""
+    textInput = prompt("Please choose the type of cuisine type, Italian, Mexican, French, Irish, Vegetarian, Hungarian, Vietnamese!")
+    let results;
+    results = dishes.filter(function(el){
+        console.log("Problem Two", el)
+        while(textInput != "done"){
+           if(textInput == "Italian"){
+                return true;
+           }
+           else if(textInput == "Mexican"){
+            return true;
+            }
+           else if(textInput == "French"){
+            return true;
+            }
+           else if(textInput == "Irish"){
+            return true;
+            }
+           else if(textInput == "Vegetarian"){
+            return true;
+            }
+           else if(textInput == "Hungarian"){
+            return true;
+            }
+           else if(textInput == "Vietnamese"){
+            return true;
+            }
+           else{
+            return false;
+            }
+        }
+            return results
+    })
+   
+}
 
-        
-    
 
 
 //3. Create a function that will return all dishes with the cuisine type of "Italian" and a serving size greater than 5.
@@ -246,21 +281,18 @@ console.log("Problem Six include Chickpeas", includeChickpea)
 //Map
 function problemEightA(){
     let results;
-    results = dishes.map(function(dishes){
-        console.log("Prblem Eight A Cuisine String", dishes.cuisine)
-    })}
-    let cuisine = problemEightA()
-    console.log(dishes.cuisine)
-//         if(el.cuisine = dishes.cuisine){
-//             return dishes.cuisine;
-//         }
-//         else{
-//             return false;
-//         }})
-//         return results
-// }[]
-// let cuisineArray = problemEightA();
-// console.log("Problem Eight A Cuisine Array", cuisineArray.cuisine)
+    results = dishes.map(function(el){
+        console.log("Prblem Eight A Cuisine String", el)
+            if(!el.cuisine == "cuisine"){
+                return el.cuisine;
+            }
+            else{
+                return false;
+            }})
+            return results
+        }
+    let cuisineType = problemEightA();
+    console.log("Prblem Eight A Cuisine String", cuisineType)
 
 //9. Create a function that will return an array of strings, with the cuisine type appended to the start of the dish's name. Ie, ["Italian Pizza", "Italian Spaghetti", ...]
 //Map 
