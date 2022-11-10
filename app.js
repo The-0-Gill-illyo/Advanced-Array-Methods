@@ -161,30 +161,30 @@ console.log("Problem One: Vegetarian Dishes", vegetarianFood)
 function problemTwo(){
     let SearchReturn = []
     let textInput = ""
-    textInput = prompt("Please choose the type of cuisine type, Italian, Mexican, French, Irish, Vegetarian, Hungarian, Vietnamese!")
     let results;
     results = dishes.filter(function(el){
         console.log("Problem Two", el)
         while(textInput != "done"){
+        textInput = prompt("Please choose the type of cuisine type, Italian, Mexican, French, Irish, Vegetarian, Hungarian, Vietnamese!")
            if(textInput == "Italian"){
                 return true;
            }
-           else if(textInput == "Mexican"){
+           else if(textInput === "Mexican"){
             return true;
             }
-           else if(textInput == "French"){
+           else if(textInput === "French"){
             return true;
             }
-           else if(textInput == "Irish"){
+           else if(textInput === "Irish"){
             return true;
             }
-           else if(textInput == "Vegetarian"){
+           else if(textInput === "Vegetarian"){
             return true;
             }
-           else if(textInput == "Hungarian"){
+           else if(textInput === "Hungarian"){
             return true;
             }
-           else if(textInput == "Vietnamese"){
+           else if(textInput === "Vietnamese"){
             return true;
             }
            else{
@@ -192,9 +192,8 @@ function problemTwo(){
             }
         }
             return results
-    })
-   
-}
+    })}
+    
 
 
 
