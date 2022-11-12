@@ -263,19 +263,18 @@ function problemSeven(){
 
 //8a. Create a function that will return an array of the string cuisine types. Ie, ["Italian", "Italian", "Mexican", ...]
 //Map
+
 function problemEightA(){
     let results;
     results = dishes.map(function(el){
-            if(!el.cuisine == "cuisine"){
-                return el.cuisine;
-            }
-            else{
-                return false;
-            }})
-            return results
-        }
-    let cuisineType = problemEightA();
-    console.log("Prblem Eight A Cuisine String", cuisineType)
+        return el.cuisine
+
+    })
+    return results
+    
+}
+let cuisineType = problemEightA();
+console.log("Prblem Eight A Cuisine String", cuisineType)
 
 //9. Create a function that will return an array of strings, with the cuisine type appended to the start of the dish's name. Ie, ["Italian Pizza", "Italian Spaghetti", ...]
 //Map 
@@ -300,3 +299,14 @@ function problemEightA(){
 //Must use Reduce, not a loop.
 
 //13. Create a function that will return an array of any objects that do not share a cuisine type with any other objects.
+function problemNine(){
+    let results;
+    results = dishes.map(function(el){
+        return el.cuisine    
+
+    })
+    return results
+    
+}
+let dishTypes = problemNine();
+console.log("Prblem Eight A Cuisine String", dishTypes)
